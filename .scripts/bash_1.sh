@@ -1,5 +1,10 @@
-# Homebrew Casks
-brew install --cask arc betterdisplay inna iterm2 keepassxc localsend obsidian raycast syncthing whatsapp zed zen-browser
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Homebrew Formulae
-brew install --Formulae aria2 bat btop cbonsai cmatrix curl duf fastfetch ffmpeg figlet fish fzf gcc git grep lazygit lsd mailsy neovim nu nushell oh-my-posh speedtest-cli starship tmux tree wget yazi yt-dlp zoxide zsh-autocomplete zsh-autosuggestions zsh-syntax-highlighting
+# macOS Cli
+defaults write com.apple.screencapture type jpg
+defaults write com.apple.Dock showhidden -bool TRUE && killall Dock
+defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+
+# Install tgpt
+curl -sSL https://raw.githubusercontent.com/aandrew-me/tgpt/main/install | bash -s /usr/local/bin
