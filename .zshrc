@@ -1,8 +1,4 @@
-touch ~/.hushlogin
-
-## Prompt ...
-
-# starship
+# Starship
 #eval "$(starship init zsh)"
 #export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
@@ -140,16 +136,14 @@ function fzf-nano {
 alias la='ls -a'
 alias l='ls -CF'
 alias ll='ls -l'
-alias ls='ls --color'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias ls='eza --icons=auto --color=always'
+alias tree='ls -a -T --git-ignore'
 alias vim=nvim
 alias nvs=nvims
-alias tree='tree -a -C --prune -I ".git"'
 alias rain='cmatrix -C yellow'
 alias bonsia='cbonsia --seed 119 --live'
-alias see='fzf --preview="bat --color=always {}"'
-alias change='code $(fzf --preview="bat --color=always {}")'
 
 fastfetch
