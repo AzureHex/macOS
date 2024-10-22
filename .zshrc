@@ -146,11 +146,10 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias vim=nvim
 alias nvs=nvims
-alias tree='tree -C'
+alias tree='tree -a -C'
 alias rain='cmatrix -C yellow'
 alias bonsia='cbonsia --seed 119 --live'
 alias see='fzf --preview="bat --color=always {}"'
 alias change='code $(fzf --preview="bat --color=always {}")'
 
 fastfetch
-
