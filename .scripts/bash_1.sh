@@ -1,10 +1,5 @@
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# macOS Cli
-defaults write com.apple.screencapture type jpg
-defaults write com.apple.Dock showhidden -bool TRUE && killall Dock
-defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
-
-# Install tgpt
-curl -sSL https://raw.githubusercontent.com/aandrew-me/tgpt/main/install | bash -s /usr/local/bin
+```sh
+chmod +x bash_2.sh
+chmod +x bash_3.sh
+./bash_2.sh
+```
