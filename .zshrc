@@ -144,6 +144,6 @@ alias tree='ls -a -T --git-ignore'
 alias vim=nvim
 alias nvs=nvims
 alias rain='cmatrix -C yellow'
-alias bonsia='cbonsia --seed 119 --live'
+alias bonsai='cbonsai --seed 119 --live'
 
 fastfetch
