@@ -3,6 +3,7 @@ rm -rf ~/Library/Application\ Support/Homebrew/analytics
 
 # Install Fonts
 brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask font-josefin-sans
 
 # Homebrew Casks
 brew install arc betterdisplay inna keepassxc localsend obsidian raycast wezterm whatsapp zed zen-browser
