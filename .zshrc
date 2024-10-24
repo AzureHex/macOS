@@ -9,7 +9,7 @@ fi
 
 export BAT_THEME="Dracula"
 
-# history
+# History
 HISTFILE=$HOME/.zsh_history
 SAVEHIST=1000
 HISTSIZE=1000
@@ -23,7 +23,7 @@ setopt hist_ignore_dups
 setopt hist_expire_dups_first
 setopt hist_verify
 
-# completion using arrow keys (based on history)
+# Completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
@@ -41,6 +41,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 #zstyle ':completion:*' menu no
 
+# Set vertical I-beam cursor
+echo -ne "\e[5 q"
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
@@ -51,25 +54,8 @@ fcd() {
   dir=$(find . -type d 2> /dev/null | fzf +m) && cd "$dir"
 }
 
-# Set vertical I-beam cursor
-echo -ne "\e[5 q"
-
-# git
-function github {
-    if [ $# -eq 0 ]; then
-        echo "Usage: github <commit-message>"
-        return 1
-    fi
-
-    git add .
-    git commit -m "$*"
-
-    if git push; then
-        echo "Changes pushed successfully."
-    else
-        echo "Failed to push changes."
-    fi
-}
+# fzf colors
+export FZF_DEFAULT_OPTS="--color=bg+:-1,gutter:-1"
 
 # fzf-file-manager
 function fzf-file-manager {
@@ -129,6 +115,23 @@ function fzf-nano {
         fi
     else
         echo "No file selected."
+    fi
+}
+
+# git
+function github {
+    if [ $# -eq 0 ]; then
+        echo "Usage: github <commit-message>"
+        return 1
+    fi
+
+    git add .
+    git commit -m "$*"
+
+    if git push; then
+        echo "Changes pushed successfully."
+    else
+        echo "Failed to push changes."
     fi
 }
 
